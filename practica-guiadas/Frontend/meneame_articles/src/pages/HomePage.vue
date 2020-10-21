@@ -98,7 +98,7 @@ export default {
     }
   },
   created() {
-    axios.get("http://localhost:3000/articles").then((articles) => {
+    this.$http.get("/articles").then((articles) => {
       this.articles =  articles.data
     })
   },
