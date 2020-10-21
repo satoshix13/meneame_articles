@@ -28,13 +28,14 @@
         
         <div class="col-6 col-12-small">
           <ul class="actions">
-            <li><button type="submit" class="btn btn-secondary mx-auto mt-5">Register</button></li>
+            <li><button  class="btn btn-secondary mx-auto mt-5" @click="toRegister">Register</button></li>
           </ul>
         </div>
+
+      <!-- <router-link class="btn" :to="{name:'register'}"></router-link> -->
       </div>
-
     </form>
-
+      
   </div>
 </template>
 
@@ -50,6 +51,9 @@ export default {
     }
   },
   methods:{
+    toRegister(){
+      this.$router.push({name:"register"})
+    },
     checkAuth(){
       this.isAuth = window.localStorage.getItem("token")!=null
     },
@@ -62,8 +66,9 @@ export default {
         const response = await this.$http.post("auth/login", loginData)
         window.localStorage.setItem("token", response.data.token)
         this.checkAuth()
+        this.$router.push({ name: "home"})
       }catch(err){
-        console.log("Se produjo un error")
+        alert("Looks like you have made a mistake, please try again or register")
       }
     },
     
