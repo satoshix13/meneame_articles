@@ -13,7 +13,7 @@ async function listArticles(req,res){
 async function createArticle(req,res){
   let article = req.body
   article.slug = slugify(article.title)
-  article.excerpt = article.body.substring(0,80)+"...."
+  article.excerpt = article.body.substring(0,300)+"...."
 
    try {
      let newArticle = await new Articles(article).save()
