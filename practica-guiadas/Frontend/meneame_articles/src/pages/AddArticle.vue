@@ -10,7 +10,7 @@
         </div>
         <div class="form-group">
           <label for="category">Category:</label>
-          <input v-model="article.category" type="text" id="category" class="form-control">
+          <input v-model="article.categories" type="text" id="category" class="form-control">
         </div>
         <div class="form-group">
           <label for="image">Image:</label>
@@ -35,7 +35,7 @@ export default {
     return {
       article: {
       title: "",
-      category: "",
+      categories: "",
       image: "",
       body: "",
       author: "Antonio"
