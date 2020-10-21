@@ -163,7 +163,6 @@ export default {
 		// }
 	},
 	computed: {
-<<<<<<< HEAD
 	  async getArticle() {
 			const id = this.$route.params.id
 			try{
@@ -173,9 +172,6 @@ export default {
 			console.info(err)
 		}
 		}
-=======
-
->>>>>>> 6a0238b78353fd7730903ac7957c9be817465163
 	}
 }
 </script>
