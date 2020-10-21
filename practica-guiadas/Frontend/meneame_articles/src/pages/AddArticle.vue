@@ -37,7 +37,8 @@ export default {
       title: "",
       category: "",
       image: "",
-      body: ""
+      body: "",
+      author: "Antonio"
     }
     }
   },
@@ -47,17 +48,24 @@ export default {
       // const token = await window.localStorage.getItem("token")
       // const tokenData = await this.$jwt.verify(token, pass)
       // console.log(token)
-     
-    }
-  },
-  methods: {
-    addArticle(){
-      console.log(this.article)
-      this.getTokenData
+      // console.log(this.article)
+      // this.getTokenData
       // try {
       //       let tokenData = await jwt.verify(req.token, config.APP_SECRET)
 
       //       let userProfile = tokenData.profile || defaultUserProfile
+     
+    }
+  },
+  methods: {
+   async addArticle(){
+      try {
+        await this.$http.post("/articles", this.article)
+        this.$router.push({ name: "home"})
+      } catch (err) {
+        alert("sorry, try please try again later")
+        console.log(err)
+      }
     }
   }
 

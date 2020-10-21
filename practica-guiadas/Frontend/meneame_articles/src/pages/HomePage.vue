@@ -52,7 +52,7 @@
                   <span class="date"> {{ transformDate(article) }}</span>
                   <h5 class="card-title pt-1"> {{ article.title }} </h5>
                   <span class="badge badge-info mb-3"> {{ article.categories[0] }} </span>
-                  <p class="card-text"> {{ article.body }} </p>
+                  <p class="card-text"> {{ article.excerpt }} </p>
 
                   <div class="row">
                     <div class="col-6 col-12-small">
