@@ -1,0 +1,23 @@
+a {
+  color:blue;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
+}
+h1{
+  text-align: center;
+  display: block;
+}
+
+
+h3 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+article{
+  border-style: solid;
+  border-color: gray;
+}
+
+button{
+  align-items: center;
+  display: block;
+}
