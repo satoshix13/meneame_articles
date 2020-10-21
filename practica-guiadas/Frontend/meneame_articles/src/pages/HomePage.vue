@@ -95,12 +95,17 @@ export default {
       selectedCategory: "",
       categories: [ "sport", "cinema & tv", "music", "technology", "politics" ],
       articles: [],
+      isAuth: false,
     }
   },
   created() {
     this.$http.get("/articles").then((articles) => {
       this.articles =  articles.data
     })
+    // const token = window.localStorage.getItem("token")
+    // if(token){
+    //   this.isAuth = true
+    // }
   },
   computed: {
     articlesFiltered() {

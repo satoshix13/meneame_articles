@@ -1,6 +1,6 @@
 <template>
 
-  <div class="login-container container d-flex align-items-center justify-content-center">
+  <div class="login-container container d-flex align-items-center justify-content-center mt-5">
 
     <form class="card bg-light p-5" @submit.prevent="login">
 

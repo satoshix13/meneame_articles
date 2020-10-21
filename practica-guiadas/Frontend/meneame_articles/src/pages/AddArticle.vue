@@ -59,6 +59,12 @@ export default {
   },
   methods: {
    async addArticle(){
+     const token = window.localStorage.getItem("token")
+     if(!token){
+       alert("You have to be logged in to send article")
+       this.$router.push({ name: "login"})
+       return
+     }
       try {
         await this.$http.post("/articles", this.article)
         this.$router.push({ name: "home"})
