@@ -51,7 +51,7 @@
                   <span class="badge badge-secondary mr-1"> {{ article.author }} </span>
                   <span class="date"> {{ transformDate(article) }}</span>
                   <h5 class="card-title pt-1"> {{ article.title }} </h5>
-                  <span class="badge badge-info mb-3"> {{ article.categories[0] }} </span>
+                  <span class="badge badge-info mb-3"> {{ article.categories }} </span>
                   <p class="card-text"> {{ article.excerpt }} </p>
 
                   <div class="row">
@@ -107,7 +107,7 @@ export default {
       if(this.selectedCategory==="") return this.articles
 
       return this.articles.filter(
-        (item) => item.categories[0] === this.selectedCategory
+        (item) => item.categories === this.selectedCategory
       )
 
     }
