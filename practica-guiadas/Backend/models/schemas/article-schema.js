@@ -9,6 +9,6 @@ module.exports = new mongoose.Schema ({
   body: { type: String, required: true },
   excerpt: { type: String, required: true },
   published_at: { type: Date, default: Date.now },
-  categories: [{ type: String, required: true }],
+  categories: { type: String, required: true },
   enabled: { type: Boolean, default: true },
 })
