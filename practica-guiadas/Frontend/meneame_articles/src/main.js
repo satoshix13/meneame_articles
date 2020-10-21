@@ -14,9 +14,6 @@ import ArticlePage from '@/pages/ArticlePage'
 import ErrorPage from '@/pages/ErrorPage'
 
 
-
-Vue.config.productionTip = false
-
 //**********Routes***************/
 const routes = [
   { path: "/", name: "home", component: HomePage },
@@ -32,10 +29,11 @@ const router = new VueRouter({ routes, mode: "history" })
 
 axios.defaults.baseURL = "http://localhost:3000/"
 
-Vue.use(VueAxios, axios)
 Vue.use(VueRouter)
 
+Vue.use(VueAxios, axios)
 
+Vue.config.productionTip = false
 
 
 new Vue({

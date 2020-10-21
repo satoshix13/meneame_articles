@@ -145,6 +145,16 @@
 
 <script>
 export default {
-  name: "ArticlePage"
+	name: "ArticlePage",
+	data () {
+		return {
+
+		}
+	},
+	computed: {
+		articles(){
+      return this.$store.state.articles
+    }
+	}
 }
 </script>
