@@ -8,14 +8,30 @@
           <label for="title">Title Article:</label>
           <input v-model="article.title" type="text" id="title" class="form-control">
         </div>
-        <div class="form-group">
-          <label for="category">Category:</label>
-          <input v-model="article.categories" type="text" id="category" class="form-control">
-        </div>
+
         <div class="form-group">
           <label for="image">Image:</label>
           <input v-model="article.image" type="text" id="image" class="form-control">
         </div>
+
+        <!-- <div class="form-group">
+          <label for="category">Category:</label>
+          <input v-model="article.categories" type="text" id="category" class="form-control">
+        </div> -->
+
+        <div class="form-group">
+          <label for="category">Category: </label> 
+          <select v-model="article.categories" class="form-control" id="category">
+            <option
+              v-for="(item,index) in categories"
+              :value="item"
+              :key="index"
+              >
+                {{ item }}
+            </option>
+          </select>
+        </div>
+
         <div class="form-group">
           <label for="exampleFormControlTextarea1">Content Article:</label>
           <textarea v-model="article.body" class="form-control" rows="3"></textarea>
@@ -33,13 +49,14 @@ export default {
   name: "AddArticle",
   data() {
     return {
+      categories: [ "sport", "cinema & tv", "music", "technology", "politics" ],
       article: {
-      title: "",
-      categories: "",
-      image: "",
-      body: "",
-      author: "Antonio"
-    }
+        title: "",
+        categories: "",
+        image: "",
+        body: "",
+        author: "Antonio"
+      }
     }
   },
   computed: {
