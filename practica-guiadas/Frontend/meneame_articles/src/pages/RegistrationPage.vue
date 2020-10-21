@@ -23,7 +23,19 @@
           <input type="password" class="form-control" placeholder="contraseña" required>
         </div>
 
-        <button type="submit" class="btn mx-auto mt-5"><a href="#">Registro</a></button>
+        <div class="row text-center">
+        <div class="col-6 col-12-small">
+          <ul class="actions">
+            <li><button type="submit" class="btn btn-info mx-auto mt-5">Register</button></li>
+          </ul>
+        </div>
+        
+        <div class="col-6 col-12-small">
+          <ul class="actions">
+            <li><button type="submit" class="btn btn-secondary mx-auto mt-5">Login</button></li>
+          </ul>
+        </div>
+      </div>
 
     </form>
 

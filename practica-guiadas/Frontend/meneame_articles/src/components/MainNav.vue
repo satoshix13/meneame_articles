@@ -15,7 +15,9 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <router-link class="nav-link" :to="{ name:'home'}">home</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link class="nav-link" :to="{ name:'home'}">Home</router-link>
         </li>
         <li class="nav-item">
           <router-link class="nav-link" :to="{ name:'addarticle'}">Add Article</router-link>
