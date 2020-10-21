@@ -4,7 +4,7 @@
 
 			<!-- Header -->
 				<section id="header">
-					<div class="pt-5">
+					<div class="p-5">
 
 						<!-- Logo -->
 							<h1><a href="index.html">MENÉAME</a></h1>

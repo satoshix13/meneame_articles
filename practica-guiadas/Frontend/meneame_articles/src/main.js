@@ -10,6 +10,7 @@ import HomePage from '@/pages/HomePage'
 import RegistrationPage from '@/pages/RegistrationPage'
 import LoginPage from '@/pages/LoginPage'
 import AddArticle from '@/pages/AddArticle'
+import ArticlePage from '@/pages/ArticlePage'
 import ErrorPage from '@/pages/ErrorPage'
 
 
@@ -22,6 +23,7 @@ const routes = [
   { path: "/login", name: "login", component: LoginPage },
   { path: "/register", name: "register", component: RegistrationPage },
   { path: "/addarticle", name: "addarticle", component: AddArticle},
+  { path: "/article", name: "articlepage", component: ArticlePage},
   { path: "*", name: "error", component: ErrorPage },
 ]
 

@@ -1,6 +1,6 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <router-link class="navbar-brand" :to="{ name:'home'}">Meneame</router-link>
+    <router-link class="navbar-brand" :to="{ name:'home'}">Menéame</router-link>
     <button
       class="navbar-toggler"
       type="button"

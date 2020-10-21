@@ -7,7 +7,6 @@
 </template>
 
 
-
 <script>
 import MainNav from './components/MainNav'
 import Footer from './components/Footer'

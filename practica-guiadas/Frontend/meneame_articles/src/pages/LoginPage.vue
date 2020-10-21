@@ -1,10 +1,11 @@
 <template>
+
   <div class="login-container container d-flex align-items-center justify-content-center">
 
     <form class="card bg-light p-5" @submit.prevent="login">
 
       <div class="text-center">
-        <h3 class="mb-5 font-weight-light">Iniciar Sesión</h3>
+        <h3 class="mb-5 font-weight-light">Login Here</h3>
       </div>
 
       <div class="form-group">
@@ -16,8 +17,6 @@
         <label for="Password">password</label>
         <input v-model="password" type="password" class="form-control" id="Password" placeholder="password">
       </div>
-  
-       <br>
 
       <div class="row text-center">
         <div class="col-6 col-12-small">
@@ -37,6 +36,7 @@
     </form>
       
   </div>
+
 </template>
 
 
