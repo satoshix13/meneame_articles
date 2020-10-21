@@ -44,7 +44,7 @@
           <div class="row row-cols-1 row-cols-md-3">
 
             <!-- Single Article -->
-            <div class="col mb-4" v-for="article  in articles" :key="article._id">
+            <div class="col mb-4" v-for="article in articlesFiltered" :key="article._id">
               <div class="card h-100">
                 <img :src="`${article.image}`" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -93,7 +93,7 @@ export default {
   data() {
     return {
       selectedCategory: "",
-      categories: [ "Sport", "Cinema and TV", "Music", "Technology", "Politics" ],
+      categories: [ "sport", "cinema & tv", "music", "technology", "politics" ],
       articles: [],
     }
   },
@@ -101,6 +101,16 @@ export default {
     this.$http.get("/articles").then((articles) => {
       this.articles =  articles.data
     })
+  },
+  computed: {
+    articlesFiltered() {
+      if(this.selectedCategory==="") return this.articles
+
+      return this.articles.filter(
+        (item) => item.categories[0] === this.selectedCategory
+      )
+
+    }
   },
   methods:{
    transformDate(article) {
