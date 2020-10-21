@@ -33,7 +33,6 @@ export default {
   name: "AddArticle",
   data() {
     return {
-      categories: [ "sport", "cinema & tv", "music", "technology", "politics" ],
       article: {
       title: "",
       categories: "",
