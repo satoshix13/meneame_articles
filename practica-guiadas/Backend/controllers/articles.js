@@ -25,7 +25,7 @@ async function createArticle(req,res){
 
  async function getArticle(req,res){
    // Obtengo la id de la url
-  const articleId = req.params.articleId
+  const articleId = req.params.id
 
   let list = await Articles.findById(articleId).exec()
   res.json(list)
@@ -37,7 +37,7 @@ router.route('/')
       .post(createArticle)
 
 
-router.route('/:articleId')
+router.route('/:id')
   .get(getArticle)
 
 
