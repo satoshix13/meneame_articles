@@ -23,12 +23,22 @@ async function createArticle(req,res){
    }
  }
 
+ async function getArticle(req,res){
+   // Obtengo la id de la url
+  const articleId = req.params.articleId
+
+  let list = await Articles.findById(articleId).exec()
+  res.json(list)
+}
 
 
 router.route('/')
       .get(listArticles)
       .post(createArticle)
 
+
+router.route('/:articleId')
+  .get(getArticle)
 
 
 module.exports = router
