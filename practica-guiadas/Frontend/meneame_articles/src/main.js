@@ -20,7 +20,7 @@ const routes = [
   { path: "/login", name: "login", component: LoginPage },
   { path: "/register", name: "register", component: RegistrationPage },
   { path: "/addarticle", name: "addarticle", component: AddArticle},
-  { path: "/article", name: "articlepage", component: ArticlePage},
+  { path: "/article/:id", name: "articlepage", component: ArticlePage},
   { path: "*", name: "error", component: ErrorPage },
 ]
 

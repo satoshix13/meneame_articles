@@ -50,7 +50,8 @@
                 <div class="card-body">
                   <span class="badge badge-secondary mr-1"> {{ article.author }} </span>
                   <span class="date"> {{ transformDate(article) }}</span>
-                  <h5 class="card-title pt-1"> {{ article.title }} </h5>
+                  <router-link class="nav-link" :to="{ name:'articlepage', params: {id: article._id }}"><h5 class="card-title pt-1"> {{ article.title }}</h5></router-link>
+                  <!-- <h5 class="card-title pt-1"> {{ article.title }} </h5> -->
                   <span class="badge badge-info mb-3"> {{ article.categories }} </span>
                   <p class="card-text"> {{ article.excerpt }} </p>
 

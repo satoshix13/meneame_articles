@@ -23,43 +23,16 @@
 						<!-- Post -->
 						<div class="box post">
 							<header>
-									<span class="badge badge-secondary mr-1">Usuario</span>
-									<span class="date">July 31</span>
-									<h3><a href="#">Just another post</a></h3>
-								
-								<h2><a href="#">By the way, many thanks to <strong>regularjane</strong>
-								for these awesome demo photos</a></h2>
+									<span class="badge badge-secondary mr-1">{{ article.author }}</span>
+									<span class="date">{{ article.published_at }}</span>
+
 							</header>
 
 							<a href="#" class="image featured"><img src="images/pic05.jpg" alt="" /></a>
 
-							<h3>You should probably check out her work</h3>
+							<h3>{{ article.title }}</h3>
 
-							<p>Phasellus laoreet massa id justo mattis pharetra. Fusce suscipit
-							ligula vel quam viverra sit amet mollis tortor congue. Sed quis mauris
-							sit amet magna accumsan tristique. Curabitur leo nibh, rutrum eu malesuada
-							in, tristique at erat lorem ipsum dolor sit amet lorem ipsum sed consequat
-							consequat magna tempus lorem ipsum consequat Phasellus laoreet massa id
-							in, tristique at erat lorem ipsum dolor sit amet lorem ipsum sed consequat
-							magna tempus veroeros lorem sed tempus aliquam lorem ipsum veroeros
-							consequat magna tempus lorem ipsum consequat Phasellus laoreet massa id
-							justo mattis pharetra. Fusce suscipit ligula vel quam viverra sit amet
-							mollis tortor congue. Sed quis mauris sit amet magna accumsan tristique.
-							Curabitur leo nibh, rutrum malesuada.
-					
-							<br><br>
-
-							Phasellus laoreet massa id justo mattis pharetra. Fusce suscipit
-							ligula vel quam viverra sit amet mollis tortor congue. Sed quis mauris
-							sit amet magna accumsan tristique. Curabitur leo nibh, rutrum eu malesuada
-							in, tristique at erat lorem ipsum dolor sit amet lorem ipsum sed consequat
-							consequat magna tempus lorem ipsum consequat Phasellus laoreet massa id
-							in, tristique at erat lorem ipsum dolor sit amet lorem ipsum sed consequat
-							magna tempus veroeros lorem sed tempus aliquam lorem ipsum veroeros
-							consequat magna tempus lorem ipsum consequat Phasellus laoreet massa id
-							justo mattis pharetra. Fusce suscipit ligula vel quam viverra sit amet
-							mollis tortor congue. Sed quis mauris sit amet magna accumsan tristique.
-							Curabitur leo nibh, rutrum malesuada.</p>
+							<p>{{ article.body }}</p>
 					
 							<div class="row">
 								<div class="col-6 col-12-small">
@@ -87,7 +60,7 @@
 					<div class="row d-flex align-items-center justify-content-center mt-2">
 
 						<div id="content" class="col-8 col-12-medium">
-							<span class="badge badge-secondary mr-1">Usuario</span>
+							<span class="badge badge-secondary mr-1">usuario</span>
 							<span class="date">July 31</span>
 							<p>Comentario 1</p>
 						</div>
@@ -148,13 +121,32 @@ export default {
 	name: "ArticlePage",
 	data () {
 		return {
-
+			article: {},
 		}
 	},
+	created() {
+		this.getArticle
+		// const id = this.$route.params.id
+		// console.info(this.getData)
+		// async function getData(){ 
+		// try{
+		// 	let article = await this.$http.get("/articles/"+id)
+		// 	console.info(article)
+		// }catch(err){
+		// 	console.info(err)
+		// }
+		// }
+	},
 	computed: {
-		articles(){
-      return this.$store.state.articles
-    }
+	  async getArticle() {
+			const id = this.$route.params.id
+			try{
+			let article = await this.$http.get("/articles/"+id)
+			this.article =  article.data
+		}catch(err){
+			console.info(err)
+		}
+		}
 	}
 }
 </script>
