@@ -65,7 +65,7 @@
                     <div class="col-6 col-12-small text-center">
                       <ul class="actions">
                         <li><a href="#" class="btn btn-secondary">+</a></li>
-                        <li>0</li>
+                        <li>{{ article.likes }}</li>
                         <li><a href="#" class="btn btn-secondary">-</a></li>
                       </ul>
                     </div>

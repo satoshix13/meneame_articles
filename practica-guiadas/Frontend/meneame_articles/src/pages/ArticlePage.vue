@@ -22,7 +22,6 @@
 						<!-- Post -->
 						<div class="box post">
 							<header>
-<<<<<<< HEAD
 									<span class="badge badge-secondary mr-1">{{ article.author }}</span>
 									<span class="date">{{ article.published_at }}</span>
 
@@ -33,27 +32,6 @@
 							<h3>{{ article.title }}</h3>
 
 							<p>{{ article.body }}</p>
-=======
-									<span class="badge badge-secondary mr-1">Usuario</span>
-									<span class="date">July 31</span>
-								
-								<h2 class="mt-4 mb-4">By the way, many thanks to regularjane	for these awesome demo photos</h2>
-							</header>
-
-							<div class="image featured"><img src="images/pic05.jpg" alt="" /></div>
-
-							<p>Phasellus laoreet massa id justo mattis pharetra. Fusce suscipit
-							ligula vel quam viverra sit amet mollis tortor congue. Sed quis mauris
-							sit amet magna accumsan tristique. Curabitur leo nibh, rutrum eu malesuada
-							in, tristique at erat lorem ipsum dolor sit amet lorem ipsum sed consequat
-							consequat magna tempus lorem ipsum consequat Phasellus laoreet massa id
-							in, tristique at erat lorem ipsum dolor sit amet lorem ipsum sed consequat
-							magna tempus veroeros lorem sed tempus aliquam lorem ipsum veroeros
-							consequat magna tempus lorem ipsum consequat Phasellus laoreet massa id
-							justo mattis pharetra. Fusce suscipit ligula vel quam viverra sit amet
-							mollis tortor congue. Sed quis mauris sit amet magna accumsan tristique.
-							Curabitur leo nibh, rutrum malesuada.</p>
->>>>>>> 6a0238b78353fd7730903ac7957c9be817465163
 					
 							<div class="row">
 								<div class="col-6 col-12-small">
@@ -65,7 +43,7 @@
 								<div class="col-6 col-12-small text-center">
 									<ul class="actions">
 										<li><a href="#" class="button">+</a></li>
-										<li>0</li>
+										<li>{{ article.likes }}</li>
 										<li><a href="#" class="button">-</a></li>
 									</ul>
 								</div>
@@ -81,11 +59,7 @@
 					<div class="row d-flex align-items-center justify-content-center mt-2">
 
 						<div id="content" class="col-8 col-12-medium">
-<<<<<<< HEAD
 							<span class="badge badge-secondary mr-1">usuario</span>
-=======
-							<span class="badge badge-secondary mr-1">User</span>
->>>>>>> 6a0238b78353fd7730903ac7957c9be817465163
 							<span class="date">July 31</span>
 							<p>Coment 1</p>
 						</div>
