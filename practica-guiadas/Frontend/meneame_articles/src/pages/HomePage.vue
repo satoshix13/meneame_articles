@@ -101,7 +101,8 @@ export default {
   },
   created() {
     this.$http.get("/articles").then((articles) => {
-      this.articles =  articles.data
+      // con reverse invierto el orden del array
+      this.articles =  articles.data.reverse()
     })
     // const token = window.localStorage.getItem("token")
     // if(token){
