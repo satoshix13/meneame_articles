@@ -15,9 +15,6 @@ const port = process.env.PORT || 8000
 const app = express()
 
 
-
-
-
 //*******Controllers********** */
 const userRoutes = require('./controllers/users')
 const articleRoutes = require('./controllers/articles')
@@ -63,8 +60,6 @@ app.use('/auth', authRoutes)
 app.get('*', (req,res) => {
   res.send("sorry page not found!")
 })
-
-
 
 
 init()
