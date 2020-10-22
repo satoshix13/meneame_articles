@@ -22,27 +22,16 @@
 						<!-- Post -->
 						<div class="box post">
 							<header>
-<<<<<<< HEAD
 									<span class="badge badge-secondary mr-1">{{ article.author }}</span>
 									<span class="date">{{ article.published_at }}</span>
 
-=======
-									<span class="badge badge-secondary mr-1"> {{ article.author }} </span>
-									<span class="date mr-1"> {{ transformDate(article) }} </span>
->>>>>>> a9aa82d643448a9dd6e874956b5f55abf3c3665f
 							</header>
 
 							<div class="image featured m-5"><img id="img-article" :src="`${article.image}`" alt="" /></div>
 
 							<h3> {{ article.title }} </h3>
 
-<<<<<<< HEAD
 							<p>{{ article.body }}</p>
-=======
-							<span class="badge badge-info mt-3 mb-3"> {{ article.categories }} </span>
-
-							<p> {{ article.body }} </p>
->>>>>>> a9aa82d643448a9dd6e874956b5f55abf3c3665f
 					
 							<div class="row">
 								<div class="col-6 col-12-small">
@@ -70,11 +59,7 @@
 					<div class="row d-flex align-items-center justify-content-center mt-2">
 
 						<div id="content" class="col-8 col-12-medium">
-<<<<<<< HEAD
 							<span class="badge badge-secondary mr-1">usuario</span>
-=======
-							<span class="badge badge-secondary mr-1">user</span>
->>>>>>> a9aa82d643448a9dd6e874956b5f55abf3c3665f
 							<span class="date">July 31</span>
 							<p>Coment 1</p>
 						</div>
