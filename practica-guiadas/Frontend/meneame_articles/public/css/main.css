@@ -1,6 +1,16 @@
 @import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Arvo:700");
 
+
+.card-title:hover {
+	color: #17a2b8;
+}
+
+#header a:hover {
+	color: #17a2b8
+}
+
+
 /*
 	Strongly Typed by HTML5 UP
 	html5up.net | @ajlkn
