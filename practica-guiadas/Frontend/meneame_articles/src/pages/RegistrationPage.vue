@@ -2,7 +2,7 @@
   
   <div class="login-container container d-flex align-items-center justify-content-center mt-5">
 
-    <form class="card p-5" @submit.prevent="register">
+    <form class="card bg-light p-5" @submit.prevent="register">
 
         <div class="text-center">
           <h3 class="mb-5 font-weight-light">Formulario de registro</h3>

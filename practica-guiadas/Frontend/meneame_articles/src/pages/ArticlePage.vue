@@ -7,7 +7,7 @@
 
 						<!-- Logo -->
 							<h1><a href="index.html">MENÉAME</a></h1>
-							
+
 					</div>
 				</section>
 
@@ -22,38 +22,17 @@
 						<!-- Post -->
 						<div class="box post">
 							<header>
-<<<<<<< HEAD
-									<span class="badge badge-secondary mr-1">{{ article.author }}</span>
-									<span class="date">{{ article.published_at }}</span>
-
+									<span class="badge badge-secondary mr-1"> {{ article.author }} </span>
+									<span class="date mr-1"> {{ transformDate(article) }} </span>
 							</header>
 
-							<a href="#" class="image featured"><img src="images/pic05.jpg" alt="" /></a>
+							<div class="image featured m-5"><img id="img-article" :src="`${article.image}`" alt="" /></div>
 
-							<h3>{{ article.title }}</h3>
+							<h3> {{ article.title }} </h3>
 
-							<p>{{ article.body }}</p>
-=======
-									<span class="badge badge-secondary mr-1">Usuario</span>
-									<span class="date">July 31</span>
-								
-								<h2 class="mt-4 mb-4">By the way, many thanks to regularjane	for these awesome demo photos</h2>
-							</header>
+							<span class="badge badge-info mt-3 mb-3"> {{ article.categories }} </span>
 
-							<div class="image featured"><img src="images/pic05.jpg" alt="" /></div>
-
-							<p>Phasellus laoreet massa id justo mattis pharetra. Fusce suscipit
-							ligula vel quam viverra sit amet mollis tortor congue. Sed quis mauris
-							sit amet magna accumsan tristique. Curabitur leo nibh, rutrum eu malesuada
-							in, tristique at erat lorem ipsum dolor sit amet lorem ipsum sed consequat
-							consequat magna tempus lorem ipsum consequat Phasellus laoreet massa id
-							in, tristique at erat lorem ipsum dolor sit amet lorem ipsum sed consequat
-							magna tempus veroeros lorem sed tempus aliquam lorem ipsum veroeros
-							consequat magna tempus lorem ipsum consequat Phasellus laoreet massa id
-							justo mattis pharetra. Fusce suscipit ligula vel quam viverra sit amet
-							mollis tortor congue. Sed quis mauris sit amet magna accumsan tristique.
-							Curabitur leo nibh, rutrum malesuada.</p>
->>>>>>> 6a0238b78353fd7730903ac7957c9be817465163
+							<p> {{ article.body }} </p>
 					
 							<div class="row">
 								<div class="col-6 col-12-small">
@@ -81,11 +60,7 @@
 					<div class="row d-flex align-items-center justify-content-center mt-2">
 
 						<div id="content" class="col-8 col-12-medium">
-<<<<<<< HEAD
-							<span class="badge badge-secondary mr-1">usuario</span>
-=======
-							<span class="badge badge-secondary mr-1">User</span>
->>>>>>> 6a0238b78353fd7730903ac7957c9be817465163
+							<span class="badge badge-secondary mr-1">user</span>
 							<span class="date">July 31</span>
 							<p>Coment 1</p>
 						</div>
@@ -140,7 +115,6 @@
 </template>
 
 
-
 <script>
 export default {
 	name: "ArticlePage",
@@ -172,6 +146,13 @@ export default {
 			console.info(err)
 		}
 		}
-	}
+	},
+	methods:{
+   	transformDate(article) {
+      let transform = new Date(article.published_at)
+      let shortTime = { year: 'numeric', month: 'short', day: 'numeric', hour: 'numeric', minute: 'numeric' }
+      return new Intl.DateTimeFormat('en-US', shortTime).format(transform)
+    }
+  }
 }
 </script>
