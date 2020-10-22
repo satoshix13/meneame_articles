@@ -39,6 +39,6 @@ router.route('/')
 
 router.route('/:id')
   .get(getArticle)
-
+  
 
 module.exports = router

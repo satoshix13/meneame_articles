@@ -11,4 +11,5 @@ module.exports = new mongoose.Schema ({
   published_at: { type: Date, default: Date.now },
   categories: { type: String, required: true },
   enabled: { type: Boolean, default: true },
+  likes: { type: Number, default: 1}
 })
