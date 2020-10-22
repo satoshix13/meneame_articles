@@ -65,7 +65,8 @@ export default {
      try {
         const response = await this.$http.post("auth/login", loginData)
         window.localStorage.setItem("token", response.data.token)
-        this.checkAuth()
+        // this.checkAuth()
+        this.$store.commit("login")
         this.$router.push({ name: "home"})
       }catch(err){
         alert("Looks like you have made a mistake, please try again or register")

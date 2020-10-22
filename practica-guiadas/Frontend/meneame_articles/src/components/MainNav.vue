@@ -40,21 +40,23 @@
 <script>
 export default {
   name: "MainNav",
-  data() {
-    return {
-      isAuth: false,
+  
+  computed: {
+    isAuth(){
+     return this.$store.state.isAuth
     }
   },
   created() {
     const token = window.localStorage.getItem("token")
     if(token){
-      this.isAuth = true
+      this.$store.commit("login")
     }
   },
   methods: {
     logout() {
+      this.$store.commit("logout")
       window.localStorage.removeItem("token")
-      this.isAuth = false
+      // this.isAuth = false
     }
   }
 };
