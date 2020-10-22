@@ -49,10 +49,10 @@
                 <img :src="`${article.image}`" class="card-img-top" alt="...">
                 <div class="card-body">
                   <span class="badge badge-secondary mr-1"> {{ article.author }} </span>
-                  <span class="date"> {{ transformDate(article) }}</span>
+                  <span class="date"> {{ transformDate(article) }} </span>
                   <router-link class="nav-link" :to="{ name:'articlepage', params: {id: article._id }}"><h5 class="card-title pt-1"> {{ article.title }}</h5></router-link>
                   <!-- <h5 class="card-title pt-1"> {{ article.title }} </h5> -->
-                  <span class="badge badge-info mb-3"> {{ article.categories }} </span>
+                  <span class="badge badge-info mb-3 mt-3"> {{ article.categories }} </span>
                   <p class="card-text"> {{ article.excerpt }} </p>
 
                   <div class="row">
@@ -101,7 +101,8 @@ export default {
   },
   created() {
     this.$http.get("/articles").then((articles) => {
-      this.articles =  articles.data
+      // con reverse invierto el orden del array
+      this.articles =  articles.data.reverse()
     })
     // const token = window.localStorage.getItem("token")
     // if(token){
