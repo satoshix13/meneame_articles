@@ -42,7 +42,7 @@
 								
 								<div class="col-6 col-12-small text-center">
 									<ul class="actions">
-										<li><a href="#" class="button">+</a></li>
+										<li><a href="#" class="button" @click.prevent="addLike">+</a></li>
 										<li>{{ article.likes }}</li>
 										<li><a href="#" class="button">-</a></li>
 									</ul>
@@ -151,7 +151,16 @@ export default {
       let transform = new Date(article.published_at)
       let shortTime = { year: 'numeric', month: 'short', day: 'numeric', hour: 'numeric', minute: 'numeric' }
       return new Intl.DateTimeFormat('en-US', shortTime).format(transform)
-    }
+		},
+		async addLike(){
+			const id = this.$route.params.id
+			try{
+				await this.$http.put("/articles/"+id)
+				console.log("nice")
+			}catch(err){
+				console.log(err)
+			}
+		}
   }
 }
 </script>
