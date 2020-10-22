@@ -32,6 +32,22 @@ async function createArticle(req,res){
 }
 
 
+async function updateLikes(req,res){
+  const articleId = req.params.id
+  try {
+    const item = await Articles.findById(articleId).exec()
+    const like = item.likes+1
+    const article = await Articles.findOneAndUpdate({_id:articleId}, like).exec()
+    if(!article) {
+      res.status(404).json({ message: "article can't be found"})
+    }
+    res.json(article)
+  } catch (e) {
+    res.status(400).json({ message: e})
+  }
+}
+
+
 router.route('/')
       .get(listArticles)
       .post(createArticle)
@@ -39,6 +55,6 @@ router.route('/')
 
 router.route('/:id')
   .get(getArticle)
-  
+  .put(updateLikes)
 
 module.exports = router
