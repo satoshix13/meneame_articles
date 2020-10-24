@@ -124,16 +124,7 @@ export default {
 	},
 	created() {
 		this.getArticle
-		// const id = this.$route.params.id
-		// console.info(this.getData)
-		// async function getData(){ 
-		// try{
-		// 	let article = await this.$http.get("/articles/"+id)
-		// 	console.info(article)
-		// }catch(err){
-		// 	console.info(err)
-		// }
-		// }
+
 	},
 	computed: {
 	  async getArticle() {
@@ -154,6 +145,8 @@ export default {
 		},
 		async addLike(){
 			const id = this.$route.params.id
+			
+	
 			try{
 				await this.$http.put("/articles/"+id)
 				console.log("nice")
