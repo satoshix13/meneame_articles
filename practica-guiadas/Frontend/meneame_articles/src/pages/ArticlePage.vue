@@ -23,7 +23,7 @@
 						<div class="box post">
 							<header>
 									<span class="badge badge-secondary mr-1">{{ article.author }}</span>
-									<span class="date">{{ article.published_at }}</span>
+									<span class="date">{{ transformDate(article) }}</span>
 
 							</header>
 
@@ -59,7 +59,7 @@
 					<div class="row d-flex align-items-center justify-content-center mt-2">
 
 						<div id="content" class="col-8 col-12-medium">
-							<span class="badge badge-secondary mr-1">usuario</span>
+							<span class="badge badge-secondary mr-1">User</span>
 							<span class="date">July 31</span>
 							<p>Coment 1</p>
 						</div>
