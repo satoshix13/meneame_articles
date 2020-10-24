@@ -36,8 +36,9 @@ async function updateLikes(req,res){
   const articleId = req.params.id
   try {
     const item = await Articles.findById(articleId).exec()
-    const like = item.likes+1
-    const article = await Articles.findOneAndUpdate({_id:articleId}, like).exec()
+    let updatedItem = item.toJSON()
+    updatedItem.likes +=1
+    const article = await Articles.findOneAndUpdate({_id:articleId}, updatedItem,{ new: true }).exec()
     if(!article) {
       res.status(404).json({ message: "article can't be found"})
     }
